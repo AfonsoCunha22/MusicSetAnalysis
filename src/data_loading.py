@@ -25,6 +25,8 @@ def move_data(source_directory, target_directory):
                 shutil.move(source_file, target_file)
             else:
                 shutil.move(source_file, target_directory)
+            
+        print("Data moved successfully")
 
     except Exception as e:
         print(f"Error moving data: {e}")
@@ -35,6 +37,6 @@ def main():
         target_directory = "data/raw"
         move_data(dataset_path, target_directory)
 
-        
+
 if __name__ == "__main__":
     main()
